@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Haveli Heritage Palette */
+  /* Maroon: 350 89% 24% */
+  /* Antique Gold: 38 65% 58% */
+  /* Cream/Beige: 36 60% 95% */
+  /* Dark Brown: 25 35% 15% */
+
+  --background: 36 40% 96%;
+  --foreground: 25 35% 15%;
+
+  --primary: 350 89% 24%;
+  --primary-foreground: 36 60% 95%;
+
+  --secondary: 38 45% 45%;
+  --secondary-foreground: 36 60% 95%;
+
+  --muted: 36 25% 88%;
+  --muted-foreground: 25 25% 45%;
+
+  --accent: 38 65% 58%;
+  --accent-foreground: 25 35% 15%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 38 30% 80%;
+  --input: 38 30% 80%;
+  --ring: 350 89% 24%;
+
+  --radius: 0.25rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply text-primary font-semibold tracking-tight;
+  }
+
+  .font-display {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: hsl(38 65% 58%);
+  }
+  .bg-gold {
+    background-color: hsl(38 65% 58%);
+  }
+  .border-gold {
+    border-color: hsl(38 65% 58%);
+  }
+
+  /* Decorative pattern overlay */
+  .pattern-overlay {
+    background-image: radial-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
